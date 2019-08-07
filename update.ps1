@@ -1,9 +1,5 @@
 Import-Module au
 
-function global:au_AfterUpdate ($Package)  {
-	Set-DescriptionFromReadme $Package
-}
-
 function global:au_SearchReplace {
 	@{
 		'au_bug.nuspec' = @{
@@ -22,4 +18,4 @@ function global:au_GetLatest {
 	}
 }
 
-Update-Package -ChecksumFor None
+Update-Package -NoReadme -ChecksumFor None
